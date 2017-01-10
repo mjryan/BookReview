@@ -7,8 +7,15 @@
 <% end %>
 
 <script>
+var ratingFormStars;
+	
+	ratingFormStars = $("#rating-form > img").length;
+
+if ( ratingFormStars < 5 ) {
+
 	$('#rating-form').raty({
 		path: '/assets/',
 		scoreName: 'review[rating]'
 	});
+}
 </script>

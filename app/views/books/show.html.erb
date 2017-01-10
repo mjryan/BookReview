@@ -55,6 +55,13 @@
 
 
 <script>
+
+var reviewCount;
+
+reviewCount = $(".review:first .review-rating > img").length;
+
+if ( reviewCount < 5 ) {
+
 	$('.review-rating').raty({
 		readOnly: true,
 		score: function() {
@@ -62,9 +69,16 @@
 		},
 		path: '/assets/'
 	});
+
+	}
 </script>
 
 <script>
+var averageReviewRating;
+	
+	averageReviewRating = $(".average-review-rating > img").length;
+
+if ( averageReviewRating < 5 ) {
 	$('.average-review-rating').raty({
 		readOnly: true,
 		path: '/assets/',
@@ -72,4 +86,5 @@
 			return $(this).attr('data-score')
 		}
 	});
+}
 </script>
