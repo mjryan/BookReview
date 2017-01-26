@@ -1,13 +1,8 @@
 <%= simple_form_for @book, :html => { :multipart => true } do |f| %>
-	<% if @category.blank? %>
-
-	<% else %>
-		<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category") %>
-	<% end %>
-
+	<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category") %>
 	<%= f.file_field :book_img %>
 	<%= f.input :title, label: "Book Title" %>
-  <%= f.input :description %>
-  <%= f.input :author %>
-  <%= f.button :submit, :class => 'btn-custom2' %>
+  	<%= f.input :description %>
+  	<%= f.input :author %>
+  	<%= f.button :submit, :class => 'btn-custom2' %>
 <% end %>

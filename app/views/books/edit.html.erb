@@ -5,12 +5,7 @@
 		<h1>Edit Book</h1>
 
 		<%= simple_form_for @book, :html => { :multipart => true } do |f| %>
-			<% if @category.blank? %>
-
-			<% else %>
-				<%= f.select :category_id, @categories %>
-			<% end %>
-
+			<%= f.select :category_id, @categories %>
 			<%= f.file_field :book_img %>
 			<%= f.input :title, label: "Book Title" %>
 		  	<%= f.input :description %>
